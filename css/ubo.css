@@ -263,3 +263,63 @@ prm-logo .logo-image, prm-logo img {
 {
 	display:none;
 }*/
+
+.footer {
+	display: none;
+	background-color: #1B1B1B;
+	color: #C9C9C9;
+	width: 100%;
+}
+.footer.visible {
+	display: block;
+}
+.footer .uio-title {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+.logo img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width:50px;
+	height:50px;
+}
+.footer a {
+	display: block;
+	color: #FFFFFF;
+}
+.footer a:active {
+	color: #EEEEEE;
+}
+.footer .uio-mobile {
+	display: none;
+}
+
+@media (max-width: 35em) {
+	.footer .md-headline {
+		font-size: 18px;
+	}
+	.footer .uio-mobile {
+		display: block;
+	}
+	.footer .uio-contact, .footer .uio-responsible {
+		display: none;
+	}
+}
+
+@media (min-width: 35em) {
+	.footer {
+		bottom:0;
+		position:fixed;
+	}
+	.footer .uio-title {
+		font-size: 30px;
+	}
+	.footer-spacing {
+		height:150px;
+	}
+	.logo img {
+		width:102px;
+		height:102px;
+	}
+}
