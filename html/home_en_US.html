@@ -54,3 +54,58 @@
         </md-card>
     </div>
 </md-content>
+
+<div class="uio-footer-spacing"></div>
+<div class="uio-footer">
+
+    <div layout="row" layout-align="center start" flex>
+
+        <!-- Spacing til venstre -->
+        <div flex="0" flex-md="0" flex-lg="10" flex-xl="20" ng-class="{'flex-lgPlus-15': $ctrl.parentCtrl.mediaQueries.lgPlus && !$ctrl.parentCtrl.facetToLeft, 'flex-lgPlus-20': $ctrl.parentCtrl.mediaQueries.lgPlus && $ctrl.parentCtrl.facetToLeft, 'flex-xl-25': $ctrl.parentCtrl.facetToLeft}"></div>
+
+        <!-- Hovedinnhold -->
+        <div flex class="uio-footer-main">
+
+            <!-- Segl -->
+            <div class="uio-logo">
+                <a href="https://www.ub.uio.no" title="Universitetsbiblioteket i Oslo"><img src="custom/UBO/img/UiO_Segl.png" alt=""></a>
+            </div>
+
+            <!-- Spacing -->
+            <div style="flex: 1 0 auto;">
+            </div>
+
+            <!-- Column shown on small screens -->
+            <div class="uio-footer-column uio-mobile">
+                <div>
+                    <a class="line" href="mailto:oria-ub@ub.uio.no">oria-ub@ub.uio.no</a>
+                    <a class="line" href="https://www.ub.uio.no/om/personvernerkleringer/">Privacy policy</a>
+                </div>
+            </div>
+
+            <!-- Column shown on large screens -->
+            <div class="uio-footer-column">
+                <div class="md-headline">Conctact information</div>
+                <div>
+                    <a class="line" href="mailto:oria-ub@ub.uio.no">oria-ub@ub.uio.no</a>
+                    <a class="line" href="https://nettskjema.uio.no/answer/61878.html">Contact us</a>
+                </div>
+            </div>
+
+            <!-- Column shown on large screens -->
+            <div class="uio-footer-column">
+                <div class="md-headline">Responsible for this page</div>
+                <div>
+                    <a class="line" href="https://ub.uio.no/english/">UiO : University of Oslo Library</a>
+                    <a class="line" href="https://www.ub.uio.no/om/personvernerkleringer/">Privacy policy</a>
+                    <div>The service is provided by <a href="https://www.bibsys.no">BIBSYS</a>.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Spacing til høyre-->
+        <div flex="0" flex-md="10" flex-lg="25" ng-class="{'flex-lgPlus-30': $ctrl.parentCtrl.mediaQueries.lgPlus && !$ctrl.parentCtrl.facetToLeft, 'flex-lgPlus-25': $ctrl.parentCtrl.mediaQueries.lgPlus && $ctrl.parentCtrl.facetToLeft, 'flex-xl-30': $ctrl.parentCtrl.mediaQueries.xl && !$ctrl.parentCtrl.facetToLeft, 'flex-xl-25': $ctrl.parentCtrl.mediaQueries && $ctrl.parentCtrl.facetToLeft}"></div>
+
+    </div>
+</div>
