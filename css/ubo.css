@@ -317,7 +317,7 @@ prm-logo .logo-image, prm-logo img {
 .uio-mobile {
 	display: none;
 }
-@media (max-width: 35em) {
+@media (max-width: 600px) {
 	.uio-footer .md-headline {
 		font-size: 18px;
 	}
@@ -329,7 +329,7 @@ prm-logo .logo-image, prm-logo img {
 	}
 }
 
-@media (min-width: 35em) {
+@media (min-width: 600px) {
 	.uio-footer {
 		bottom:0;
 		position:fixed;
