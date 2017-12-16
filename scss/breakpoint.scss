@@ -1,0 +1,33 @@
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 599px) { @content; }
+  }
+  @else if $class == gt-xs {
+    @media (min-width: 600px) { @content; }
+  }
+  @else if $class == sm {
+    @media (min-width: 600px) and (max-width: 959px) { @content; }
+  }
+  @else if $class == gt-sm {
+    @media (min-width: 960px) { @content; }
+  }
+  @else if $class == md {
+    @media (min-width: 960px) and (max-width: 1279px) { @content; }
+  }
+  @else if $class == gt-md {
+    @media (min-width: 1280px) { @content; }
+  }
+  @else if $class == lg {
+    @media (min-width: 1280px) and (max-width: 1919px) { @content; }
+  }
+  @else if $class == gt-lg {
+    @media (min-width: 1920px) { @content; }
+  }
+  @else if $class == xl {
+    @media (min-width: 1920px) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: xs, gt-xs, sm, gt-sm, md, gt-md, lg, gt-lg, xl";
+  }
+}

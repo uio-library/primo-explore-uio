@@ -1,5 +1,15 @@
-# The Primo New UI Customization Workflow Development Environment
 
+## Layout
+
+* `layout-xs` width < 600px
+* `layout-gt-xs ` width >= 600px
+* `layout-sm 600px <=` width < 960px
+* `layout-gt-sm ` width >= 960px
+* `layout-md 960px <=` width < 1280px
+* `layout-gt-md ` width >= 1280px
+* `layout-lg 1280px <=` width < 1920px
+* `layout-gt-lg ` width >= 1920px
+* `layout-xl` width >= 1920px
 
 ##css documentation
 
