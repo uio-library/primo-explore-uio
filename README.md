@@ -86,3 +86,86 @@ Suggested reading:
 
 * [Component Lifecycle: $doCheck (angular 1.5.x)](http://www.kristofdegrave.be/2016/07/component-lifecycle-docheck-angular-15x_22.html)
 * [Mastering $watch in AngularJS](https://www.sitepoint.com/mastering-watch-angularjs/)
+
+
+## Directives (per Dec 2017)
+
+- prm-action-container
+- prm-action-container-after
+- prm-action-list
+- prm-action-list-after
+- prm-alma-mashup
+- prm-alma-more-inst
+- prm-alma-more-inst-after
+- prm-authentication
+- prm-authentication-after
+- prm-autocomplete
+- prm-back-to-search-results-button
+- prm-back-to-search-results-button-after
+- prm-brief-result
+- prm-brief-result-after
+- prm-brief-result-container
+- prm-brief-result-container-after
+- prm-change-lang
+- prm-full-view
+- prm-full-view-after
+- prm-full-view-cont
+- prm-full-view-cont-after
+- prm-full-view-page
+- prm-full-view-page-after
+- prm-full-view-service-container
+- prm-full-view-service-container-after
+- prm-highlight
+- prm-icon
+- prm-icon-after
+- prm-library-card-menu
+- prm-library-card-menu-after
+- prm-login-alma-mashup
+- prm-login-alma-mashup-after
+- prm-login-iframe
+- prm-logo
+- prm-logo-after
+- prm-main-menu
+- prm-main-menu-after
+- prm-record-collection-paths
+- prm-record-collection-paths-after
+- prm-save-to-favorites-button
+- prm-save-to-favorites-button-after
+- prm-search-bar
+- prm-search-bar-after
+- prm-search-bookmark-filter
+- prm-search-bookmark-filter-after
+- prm-search-result-availability-line
+- prm-search-result-availability-line-after
+- prm-search-result-frbr-line
+- prm-search-result-frbr-line-after
+- prm-search-result-journal-indication-line
+- prm-search-result-journal-indication-line-after
+- prm-search-result-thumbnail-container
+- prm-search-result-thumbnail-container-after
+- prm-service-details
+- prm-service-details-after
+- prm-service-header
+- prm-service-header-after
+- prm-service-links
+- prm-service-links-after
+- prm-silent-login
+- prm-silent-login-after
+- prm-skip-to
+- prm-skip-to-after
+- prm-snippet
+- prm-snippet-after
+- prm-tabs-and-scopes-selector
+- prm-tabs-and-scopes-selector-after
+- prm-tags-list
+- prm-tags-list-after
+- prm-top-bar-before
+- prm-top-nav-bar-links-after
+- prm-topbar
+- prm-topbar-after
+- prm-user-area
+- prm-user-area-after
+- prm-virtual-browse
+- prm-virtual-browse-after
+- prm-virtual-browse-item
+- prm-virtual-browse-item-after
