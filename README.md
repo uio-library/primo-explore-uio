@@ -36,11 +36,17 @@ Then set `PROXY_SERVER` in `gulp/config.js` like so:
 var PROXY_SERVER = 'https://bibsys-almaprimo.hosted.exlibrisgroup.com:443';
 ```
 
+Download the central package from Primo Back Office (Primo Utilities > UI customization Package Manager)
+into `primo-explore/custom` and unzip it. Make sure the folder name is `CENTRAL_PACKAGE`. This contains the modifications from Bibsys.
+Open question: Do they version control it?
+
 Clone the UiO package into `primo-explore/custom`:
 
 ```
 git clone git@github.com:uio-library/ubo-primo-package.git primo-explore/custom/UIO
 ```
+
+You should now have both `primo-explore/custom/CENTRAL_PACKAGE` and `primo-explore/custom/UIO`.
 
 ## Help and documentation
 
