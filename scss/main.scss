@@ -1,243 +1,510 @@
-.main._md.md-primoExplore-theme.layout-align-center-start.layout-row.flex {
-  flex-flow: row nowrap;
-}
 
+.main._md.md-primoExplore-theme.layout-align-center-start.layout-row.flex {
+    flex-flow: row nowrap;
+}
 /*Aktiver denne hvis fasettene er på høyre side og du ønsker dem på venstre side*/
 /*
 .main._md.md-primoExplore-theme.layout-align-center-start.layout-row.flex.padded-container {
-display: -webkit-flex; !* Safari *!
--webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
-display: flex;
-flex-flow: row-reverse wrap;
+   display: -webkit-flex; !* Safari *!
+    -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
+    display: flex;
+    flex-flow: row-reverse wrap;
 }
 */
 
 /*Aktiver denne hvis fasettene er på venstre side og du ønsker dem på høyre side*/
 /*
 .main._md.md-primoExplore-theme.layout-align-center-start.layout-row.flex.padded-container {
-display: -webkit-flex; !* Safari *!
--webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
-display: flex;
-flex-flow: row wrap;
+   display: -webkit-flex; !* Safari *!
+    -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
+    display: flex;
+    flex-flow: row wrap;
 }
 */
 
 /* top menu colour*/
-.prm-primary-bg.prm-hue1, prm-spinner.prm-hue1.overlay-cover.light-on-dark::after, prm-topbar .top-nav-bar, prm-search-bar.prm-hue1 {
-  background-color: black;
+.prm-primary-bg.prm-hue1, prm-spinner.prm-hue1.overlay-cover.light-on-dark::after, prm-topbar .top-nav-bar, prm-search-bar.prm-hue1
+{
+	background-color:black;
 }
 
 /*hover over top menu colour */
-md-fab-toolbar md-toolbar {
-  background-color: #666 !important;
+md-fab-toolbar md-toolbar
+{
+	background-color:#666 !important;
 }
 /* search box area colour*/
-.prm-primary-bg, prm-spinner.overlay-cover.light-on-dark::after, prm-search-bar {
-  background-color: #2c2c2c;
+.prm-primary-bg, prm-spinner.overlay-cover.light-on-dark::after, prm-search-bar
+{
+	background-color: #2c2c2c;
 }
 
 /* Advanced search button hover colour*/
-.md-button:hover:not([disabled]), .md-button:focus:not([disabled]), .md-button.hovered:not([disabled]), .md-button.md-focused:not([disabled]), .md-button._md-focused:not([disabled]) {
-  background-color: rgba(204, 204, 204, 0.1);
-  /*background-color: #636363;*/;
+.md-button:hover:not([disabled]), .md-button:focus:not([disabled]), .md-button.hovered:not([disabled]), .md-button.md-focused:not([disabled]), .md-button._md-focused:not([disabled])
+{
+	background-color: rgba(204, 204, 204, 0.1);
+	/*background-color: #636363;*/
 }
 
 
 /* Logo background colour*/
-.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .prm-links-background.prm-hue-1, .recommendations-title.hover>span>span, .recommendations-title:hover>span>span, a.hover, a:focus, a:hover {
-  background: transparent;
+.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .prm-links-background.prm-hue-1, .recommendations-title.hover>span>span, .recommendations-title:hover>span>span, a.hover, a:focus, a:hover
+{
+	background: transparent;
 }
 
-.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .recommendations-title.hover>span>span, .recommendations-title:hover>span>span, a.hover, a:focus, a:hover {
-  box-shadow: inset 0 -1px 0 0 transparent;
+.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .recommendations-title.hover>span>span, .recommendations-title:hover>span>span, a.hover, a:focus, a:hover
+{
+	box-shadow: inset 0 -1px 0 0 transparent;
 }
 
 /*menu hover colour*/
-._md-focused.md-button.button-over-dark:not([disabled]), .hoverable-over-dark._md-focused:not([disabled]), .hoverable-over-dark.hovered:not([disabled]), .hoverable-over-dark.md-focused:not([disabled]), .hoverable-over-dark:focus:not([disabled]), .hoverable-over-dark:hover:not([disabled]), .hovered.md-button.button-over-dark:not([disabled]), .md-button.button-over-dark:focus:not([disabled]), .md-button.button-over-dark:hover:not([disabled]), .md-focused.md-button.button-over-dark:not([disabled]), prm-main-menu[menu-type=full] ._md-focused.md-button.md-focused:not([disabled]), prm-main-menu[menu-type=full] ._md-focused.md-button:not([disabled]):focus, prm-main-menu[menu-type=full] ._md-focused.md-button:not([disabled]):hover, prm-main-menu[menu-type=full] ._md-focused.overlay-menu-item.md-focused:not([disabled]), prm-main-menu[menu-type=full] ._md-focused.overlay-menu-item:not([disabled]):focus, prm-main-menu[menu-type=full] ._md-focused.overlay-menu-item:not([disabled]):hover, prm-main-menu[menu-type=full] .hovered.md-button.md-focused:not([disabled]), prm-main-menu[menu-type=full] .hovered.md-button:not([disabled]):focus, prm-main-menu[menu-type=full] .hovered.md-button:not([disabled]):hover, prm-main-menu[menu-type=full] .hovered.overlay-menu-item.md-focused:not([disabled]), prm-main-menu[menu-type=full] .hovered.overlay-menu-item:not([disabled]):focus, prm-main-menu[menu-type=full] .hovered.overlay-menu-item:not([disabled]):hover, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>._md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.hovered.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:focus:not([disabled]), prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:hover:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button:focus:not([disabled]), prm-main-menu[menu-type=full] .md-button:hover:not([disabled]), prm-main-menu[menu-type=full] .md-button md-select._md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button md-select.hovered:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button md-select.md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button md-select:focus:not([disabled]), prm-main-menu[menu-type=full] .md-button md-select:hover:not([disabled]):focus, prm-main-menu[menu-type=full] .md-focused.md-button:not([disabled]), prm-main-menu[menu-type=full] .md-focused.overlay-menu-item:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>._md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.hovered.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:focus:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:hover:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item:focus:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item:hover:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item md-select._md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item md-select.hovered:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item md-select.md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item md-select:focus:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item md-select:hover:not([disabled]):focus, prm-main-menu[menu-type=full] md-card._md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] md-card._md-focused:not([disabled]):hover, prm-main-menu[menu-type=full] md-card.hovered:not([disabled]):focus, prm-main-menu[menu-type=full] md-card.hovered:not([disabled]):hover, prm-main-menu[menu-type=full] md-card.md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] md-card.md-focused:not([disabled]):hover, prm-main-menu[menu-type=full] md-card:focus:not([disabled]), prm-main-menu[menu-type=full] md-card:hover:not([disabled]), prm-topbar ._md-focused.md-button:not([disabled]), prm-topbar .hovered.md-button:not([disabled]), prm-topbar .md-button:focus:not([disabled]), prm-topbar .md-button:hover:not([disabled]), prm-topbar .md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item ._md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .hovered.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:focus:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:hover:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container._md-focused:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container.hovered:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container.md-focused:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:focus:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:hover:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item ._md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .hovered.md-button:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .md-button:focus:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container._md-focused:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container.hovered:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container.md-focused:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:focus:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:hover:not([disabled]) {
-  background-color: #636363;
+._md-focused.md-button.button-over-dark:not([disabled]), .hoverable-over-dark._md-focused:not([disabled]), .hoverable-over-dark.hovered:not([disabled]), .hoverable-over-dark.md-focused:not([disabled]), .hoverable-over-dark:focus:not([disabled]), .hoverable-over-dark:hover:not([disabled]), .hovered.md-button.button-over-dark:not([disabled]), .md-button.button-over-dark:focus:not([disabled]), .md-button.button-over-dark:hover:not([disabled]), .md-focused.md-button.button-over-dark:not([disabled]), prm-main-menu[menu-type=full] ._md-focused.md-button.md-focused:not([disabled]), prm-main-menu[menu-type=full] ._md-focused.md-button:not([disabled]):focus, prm-main-menu[menu-type=full] ._md-focused.md-button:not([disabled]):hover, prm-main-menu[menu-type=full] ._md-focused.overlay-menu-item.md-focused:not([disabled]), prm-main-menu[menu-type=full] ._md-focused.overlay-menu-item:not([disabled]):focus, prm-main-menu[menu-type=full] ._md-focused.overlay-menu-item:not([disabled]):hover, prm-main-menu[menu-type=full] .hovered.md-button.md-focused:not([disabled]), prm-main-menu[menu-type=full] .hovered.md-button:not([disabled]):focus, prm-main-menu[menu-type=full] .hovered.md-button:not([disabled]):hover, prm-main-menu[menu-type=full] .hovered.overlay-menu-item.md-focused:not([disabled]), prm-main-menu[menu-type=full] .hovered.overlay-menu-item:not([disabled]):focus, prm-main-menu[menu-type=full] .hovered.overlay-menu-item:not([disabled]):hover, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>._md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.hovered.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:focus:not([disabled]), prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:hover:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button:focus:not([disabled]), prm-main-menu[menu-type=full] .md-button:hover:not([disabled]), prm-main-menu[menu-type=full] .md-button md-select._md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button md-select.hovered:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button md-select.md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .md-button md-select:focus:not([disabled]), prm-main-menu[menu-type=full] .md-button md-select:hover:not([disabled]):focus, prm-main-menu[menu-type=full] .md-focused.md-button:not([disabled]), prm-main-menu[menu-type=full] .md-focused.overlay-menu-item:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>._md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.hovered.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-focused.md-select-dummy:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:focus:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:hover:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item:focus:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item:hover:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item md-select._md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item md-select.hovered:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item md-select.md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] .overlay-menu-item md-select:focus:not([disabled]), prm-main-menu[menu-type=full] .overlay-menu-item md-select:hover:not([disabled]):focus, prm-main-menu[menu-type=full] md-card._md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] md-card._md-focused:not([disabled]):hover, prm-main-menu[menu-type=full] md-card.hovered:not([disabled]):focus, prm-main-menu[menu-type=full] md-card.hovered:not([disabled]):hover, prm-main-menu[menu-type=full] md-card.md-focused:not([disabled]):focus, prm-main-menu[menu-type=full] md-card.md-focused:not([disabled]):hover, prm-main-menu[menu-type=full] md-card:focus:not([disabled]), prm-main-menu[menu-type=full] md-card:hover:not([disabled]), prm-topbar ._md-focused.md-button:not([disabled]), prm-topbar .hovered.md-button:not([disabled]), prm-topbar .md-button:focus:not([disabled]), prm-topbar .md-button:hover:not([disabled]), prm-topbar .md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item ._md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .hovered.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:focus:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:hover:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item .md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container._md-focused:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container.hovered:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container.md-focused:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:focus:not([disabled]), prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:hover:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item ._md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .hovered.md-button:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .md-button:focus:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item .md-focused.md-button:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container._md-focused:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container.hovered:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container.md-focused:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:focus:not([disabled]), prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:hover:not([disabled])
+{
+	background-color: #636363;
 }
 
+
 /* top menu link colour*/
-a, .md-button.arrow-link-button .button-content {
-  color: #2771bb;
+a, .md-button.arrow-link-button .button-content
+{
+	color:#2771bb;
 }
 
 /* Search box area text colour*/
-.hoverable-over-dark, prm-main-menu[menu-type="full"] .md-button:hover, prm-main-menu[menu-type="full"] .md-button:focus, prm-main-menu[menu-type="full"] .md-button.md-focused, prm-main-menu[menu-type="full"] .md-button md-select:focus, prm-main-menu[menu-type="full"] .md-button .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type="full"] .overlay-menu-item:hover, prm-main-menu[menu-type="full"] .overlay-menu-item:focus, prm-main-menu[menu-type="full"] .overlay-menu-item.md-focused, prm-main-menu[menu-type="full"] .overlay-menu-item md-select:focus, prm-main-menu[menu-type="full"] .overlay-menu-item .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type="full"] md-card:hover, prm-main-menu[menu-type="full"] md-card:focus, prm-user-area md-fab-toolbar .md-fab-action-item .md-button, prm-user-area md-fab-toolbar ._md-fab-action-item .md-button, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container, .md-button.button-over-dark, prm-user-area .md-button.user-menu-button, prm-topbar .md-button {
-  color: #aaabab;
+.hoverable-over-dark, prm-main-menu[menu-type="full"] .md-button:hover, prm-main-menu[menu-type="full"] .md-button:focus, prm-main-menu[menu-type="full"] .md-button.md-focused, prm-main-menu[menu-type="full"] .md-button md-select:focus, prm-main-menu[menu-type="full"] .md-button .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type="full"] .overlay-menu-item:hover, prm-main-menu[menu-type="full"] .overlay-menu-item:focus, prm-main-menu[menu-type="full"] .overlay-menu-item.md-focused, prm-main-menu[menu-type="full"] .overlay-menu-item md-select:focus, prm-main-menu[menu-type="full"] .overlay-menu-item .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type="full"] md-card:hover, prm-main-menu[menu-type="full"] md-card:focus, prm-user-area md-fab-toolbar .md-fab-action-item .md-button, prm-user-area md-fab-toolbar ._md-fab-action-item .md-button, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container, .md-button.button-over-dark, prm-user-area .md-button.user-menu-button, prm-topbar .md-button
+{
+	color:#aaabab;
 }
 
 /* top menu font size*/
-prm-main-menu[menu-type="menu"] .md-button {
-  font-size: .95em;
-  text-transform: none;
+prm-main-menu[menu-type="menu"] .md-button
+{
+	font-size:1.1em;
+	text-transform: none;
 }
 
 /* top menu link small letters
 prm-topbar .md-button
 {
-text-transform: none;
+    text-transform: none;
 }*/
 
 /* top menu link underline
 .md-button:hover
 {
-text-decoration:underline
+	text-decoration:underline
 }
 */
 
 /* top menu link underline*/
-.item-content:hover {
-  text-decoration: underline;
+.item-content:hover
+{
+	text-decoration:underline;
 }
 
 /* top menu box hover colour
 .zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:hover
 {
-background:red;
+	background:red;
 }
 */
 /* top menu login box hover colour
 .md-fab-action-item:hover
 {
-background:red;
+	background:red;
 }
 */
 
-/*body colour*/
-.prm-background, html, body, prm-search-bar .simple-search-wrapper .search-options::after, prm-search-bar .simple-search-wrapper .search-options md-divider, .__xs prm-facet, .__sm prm-facet, .__sm .sidebar, .__xs .sidebar, prm-full-view-cont prm-recomendation-item .media-on-hover .pin-button, prm-full-view-cont .recommendations-title::after, prm-full-view-cont .recommendations-title prm-icon, md-virtual-repeat-container#prm-simple-search .md-autocomplete-suggestions md-divider, md-card .card-content-block {
-  background-color: #e2e3e5;
-}
+/*body colour
+.prm-background, html, body, prm-search-bar .simple-search-wrapper .search-options::after, prm-search-bar .simple-search-wrapper .search-options md-divider, .__xs prm-facet, .__sm prm-facet, .__sm .sidebar, .__xs .sidebar, prm-full-view-cont prm-recomendation-item .media-on-hover .pin-button, prm-full-view-cont .recommendations-title::after, prm-full-view-cont .recommendations-title prm-icon, md-virtual-repeat-container#prm-simple-search .md-autocomplete-suggestions md-divider, md-card .card-content-block
+{
+	background-color:#e2e3e5;
+}*/
 
 /*homepage box colours*/
-.prm-background.prm-hue2, html.prm-hue2, body.prm-hue2, .line-clamp-1::after, .line-clamp-2::after, .line-clamp-3::after, .line-clamp-4::after, .line-clamp-5::after, prm-search-result-list .results-title, prm-search-result-list .results-footer, prm-search-result-list md-list-item, prm-search-bar .simple-search-wrapper .prm-hue2.search-options::after, prm-search-bar .simple-search-wrapper .search-options md-divider.prm-hue2, .prm-full-view-dialog, .full-view-inner-container, .__xs prm-facet.prm-hue2, .__sm prm-facet.prm-hue2, .__sm .prm-hue2.sidebar, .__xs .prm-hue2.sidebar, .__xs prm-full-view-cont .recommendations-wrapper, .__sm prm-full-view-cont .recommendations-wrapper, prm-recomendation-item .media-on-hover .pin-button, prm-recomendation-item .media-on-hover .pin-button:hover, prm-full-view-cont prm-recomendation-item .media-on-hover .prm-hue2.pin-button, .recommendations-title::after, prm-full-view-cont .prm-hue2.recommendations-title::after, .__xs prm-full-view-cont .recommendations-title::after, .__sm prm-full-view-cont .recommendations-title::after, .recommendations-title prm-icon, prm-full-view-cont .recommendations-title prm-icon.prm-hue2, .__xs prm-full-view-cont .recommendations-title prm-icon, .__sm prm-full-view-cont .recommendations-title prm-icon, md-virtual-repeat-container#prm-simple-search .md-autocomplete-suggestions md-divider.prm-hue2, md-grid-tile, .tiles-grid-tile, md-grid-tile md-list prm-spinner.overlay-cover::after, md-grid-tile .tile-content prm-spinner.overlay-cover::after, .tiles-grid-tile md-list prm-spinner.overlay-cover::after, .tiles-grid-tile .tile-content prm-spinner.overlay-cover::after, md-card.default-card, md-card .prm-hue2.card-content-block {
-  background-color: #f5f7f8;
+.prm-background.prm-hue2, html.prm-hue2, body.prm-hue2, .line-clamp-1::after, .line-clamp-2::after, .line-clamp-3::after, .line-clamp-4::after, .line-clamp-5::after, prm-search-result-list .results-title, prm-search-result-list .results-footer, prm-search-result-list md-list-item, prm-search-bar .simple-search-wrapper .prm-hue2.search-options::after, prm-search-bar .simple-search-wrapper .search-options md-divider.prm-hue2, .prm-full-view-dialog, .full-view-inner-container, .__xs prm-facet.prm-hue2, .__sm prm-facet.prm-hue2, .__sm .prm-hue2.sidebar, .__xs .prm-hue2.sidebar, .__xs prm-full-view-cont .recommendations-wrapper, .__sm prm-full-view-cont .recommendations-wrapper, prm-recomendation-item .media-on-hover .pin-button, prm-recomendation-item .media-on-hover .pin-button:hover, prm-full-view-cont prm-recomendation-item .media-on-hover .prm-hue2.pin-button, .recommendations-title::after, prm-full-view-cont .prm-hue2.recommendations-title::after, .__xs prm-full-view-cont .recommendations-title::after, .__sm prm-full-view-cont .recommendations-title::after, .recommendations-title prm-icon, prm-full-view-cont .recommendations-title prm-icon.prm-hue2, .__xs prm-full-view-cont .recommendations-title prm-icon, .__sm prm-full-view-cont .recommendations-title prm-icon, md-virtual-repeat-container#prm-simple-search .md-autocomplete-suggestions md-divider.prm-hue2, md-grid-tile, .tiles-grid-tile, md-grid-tile md-list prm-spinner.overlay-cover::after, md-grid-tile .tile-content prm-spinner.overlay-cover::after, .tiles-grid-tile md-list prm-spinner.overlay-cover::after, .tiles-grid-tile .tile-content prm-spinner.overlay-cover::after, md-card.default-card, md-card .prm-hue2.card-content-block
+{
+	background-color:#f5f7f8;
 }
 
 
 
 /* homepage boxes title-heading*/
-.md-headline {
-  font-weight: 400 !important;
+.md-headline
+{
+	font-weight: 400 !important;
 }
 
 /* Login mouseover menu colour. Feil siden beskjed bokse tekst fargen også får hvit farge
 .button-with-icon.zero-margin.md-button.md-primoExplore-theme.md-ink-ripple > span
 {
-color:white;
+	color:white;
 }*/
 
 /* Beskjed boks tekst farge*/
-.bar prm-authentication .md-button {
-  color: #0075b0;
+.bar prm-authentication .md-button
+{
+	color:#0075b0;
 }
 
 /* Avansert tekst farge*/
-prm-search-bar .search-switch-buttons .md-button.switch-to-advanced {
-  color: white;
+prm-search-bar .search-switch-buttons .md-button.switch-to-advanced
+{
+	color:white;
 }
 
 /*Tekst farge logg på boksen*/
-prm-user-area md-fab-toolbar .md-fab-action-item .md-button {
-  color: white;
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button
+{
+	color:white;
 }
 /*Langauge text size*/
-prm-user-area .user-menu-button .user-language {
-  font-weight: 0;
-  color: white;
+prm-user-area .user-menu-button .user-language
+{
+	font-weight:0;
+	color:white;
 }
 
 /*Langauge text size*/
-.text-uppercase, prm-user-area .md-button.button-as-link, prm-user-area .bar prm-authentication .md-button, .bar prm-authentication prm-user-area .md-button {
-  text-transform: none;
+.text-uppercase, prm-user-area .md-button.button-as-link, prm-user-area .bar prm-authentication .md-button, .bar prm-authentication prm-user-area .md-button
+{
+	text-transform:none;
 }
 
 /*Language text colour after hover*/
-prm-user-area md-fab-toolbar .md-fab-action-item md-input-container md-select, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container .md-input-container-dummy > .md-select-dummy, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container md-select, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container .md-input-container-dummy > .md-select-dummy {
-  color: white;
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container md-select, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container .md-input-container-dummy > .md-select-dummy, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container md-select, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container .md-input-container-dummy > .md-select-dummy
+{
+	color:white;
 }
 
-prm-search-result-list .results-title {
-  font-weight: 600;
+prm-search-result-list .results-title
+{
+	font-weight:600;
 }
 /*
 prm-logo div.product-logo {
-display:none;
+    display:none;
 }
 
 prm-logo div.product-logo-local {
-display: flex;
+ display: flex;
 }
 */
 
 /*
 .layout-align-center-center > *, .layout-align-end-center > *, .layout-align-space-around-center > *, .layout-align-space-between-center > *, .layout-align-start-center > *
 {
-max-width: none;
+	max-width: none;
 }*/
 
-/* Skjule scopene fulltekst, DUO og alle bibliotek*/
+/* Skjule scopene fulltekst, DUO alle_bibliotek i vanlig søk*/
+/*
+md-option[value="alle_bibliotek"]
+{
+	display: none;
+}
+md-option[value="fulltext"]
+{
+	display: none;
+}
+md-option[value="local_collection"]
+{
+	display: none;
+}
+*/
+/* Skjule scopene fulltekst, DUO og alle_bibliotek på startsiden(autocomplete)*/
+/*
+.md-autocomplete-suggestions li:nth-child(2)
+{
+	display:none;
+}
+.md-autocomplete-suggestions li:nth-child(4)
+{
+	display:none;
+}
+.md-autocomplete-suggestions li:last-child
+{
+	display:none;
+}
+*/
 
-md-option[value="fulltext"] {
-  display: none;
+/*Sjule scopene(tab) fulltekst, DUO, alle_bibliotek i avansert søk*/
+/*md-radio-button[value="alle_bibliotek"]
+{
+	display:none;
+}
+md-radio-button[value="local_collection"]
+{
+	display:none;
+}
+md-radio-button[value="fulltext"]
+{
+	display:none;
+}
+*/
+
+
+
+/*Avansert søk*/
+
+
+md-radio-button[value="library_catalogue"] {
+    display: none;
 }
 
-md-option[value="local_collection"] {
-  display: none;
-}
+/*Drop-down*/
 
-/* Skjule scopene fulltekst, DUO og alle bibliotek på startsiden*/
-.md-autocomplete-suggestions li:nth-child(4) {
-  display: none;
+md-option[value="library_catalogue"] {
+    display: none;
 }
-
-.md-autocomplete-suggestions li:last-child {
-  display: none;
-}
-
 /*
 
 prm-main-menu[menu-type="menu"] .md-button
 {
-width: 8em;
+	width: 8em;
 }*/
 
-.flex-100, .layout-column>.flex-100, .layout-row>.flex-100 {
-  width: 43em;
+.flex-100, .layout-column>.flex-100, .layout-row>.flex-100
+{
+	width: 43em;
 }
 
-/* Call the clickable logo */
+/* Call the clickable logo
 prm-logo div.product-logo {
-  display: none;
+    display:none;
 }
-
 prm-logo div.product-logo-local {
-  display: flex;
+	display: flex;
 }
 
 prm-logo .logo-image, prm-logo img {
-  max-height: 35px;
+    max-height: 35px;
+}*/
+
+/* Skjule "finner ikke" menu*/
+/*.zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:nth-child(5)
+{
+	display:none;
+}*/
+
+
+/* Skjule "Tidsskrift søk" i topmenu */
+
+
+.zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:nth-child(7)
+{
+	display:none;
+}
+prm-main-menu a:nth-child(7).md-button
+{
+	display:none;
+}
+.zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:nth-child(8)
+{
+	display:none;
+}
+prm-main-menu a:nth-child(8).md-button
+{
+	display:none;
 }
 
-/* Skjule "finner ikke" menu*/
-/*.zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:nth-child(5)
+/*Skjule "Tidsskrift søk" i vis mer meny*/
+
+/*
+.transparent-card.md-ink-ripple._md.md-primoExplore-theme.flex-gt-xs-45.flex-gt-sm-30.flex-100:nth-child(7)
 {
-display:none;
+	display:none;
+}
+prm-main-menu md-card:nth-child(7)
+{
+	display:none;
 }*/
 
 
-/* Skjule "finner ikke" menu*/
+
+/* Skjule "finner ikke" i topmenu*/
 /*.zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:nth-child(5)
 {
-display:none;
+	display:none;
 }*/
 
-
-/* Skjule "finner ikke" menu*/
-/*.zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:nth-child(5)
+/*Farge på facet header(title)*/
+prm-facet-group button.section-title
 {
-display:none;
+	background-color:#2c2c2c;
+}
+
+/*Farge på bekreft søkeknappen og vise flere treff knappen*/
+.md-button.button-confirm
+{
+	background-color: #2974b5;
+}
+
+/*Farge på bekreft søkeknappen og vise flere treff knappen*/
+div.simple-search-wrapper .md-button.button-confirm:hover:not([disabled])
+{
+	background-color: #2974b5;
+	color: white;
+}
+
+.md-button.button-confirm:focus:not([disabled]), .md-button.button-confirm.hovered:not([disabled]), .md-button.button-confirm.md-focused:not([disabled]), .md-button.button-confirm._md-focused:not([disabled])
+{
+	background-color: #2974b5;
+}
+
+.md-button.button-confirm:hover:not([disabled])
+{
+	background-color: #2974b5;
+}
+
+prm-facet-exact prm-icon[icon-definition="include-facet"] {
+    color: #2974b5;
+}
+
+prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-bar
+{
+	background-color: #2974b5;
+}
+
+prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-thumb
+{
+	background-color: #2974b5;
+}
+
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary, .multiselect-submit .multiselect-submit-inner .md-button.md-primary:focus, .multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover
+{
+	background-color: #2974b5;
+}
+
+.md-chips .md-chip
+{
+	background-color: #2974b5;
+}
+
+.classic-input .search-scope
+{
+	background-color: #2974b5;
+}
+
+/*Farge på "close-button på item view*/
+.prm-full-view-dialog._md-transition-in ~ .close-button, .prm-full-view-dialog.md-transition-in ~ .close-button
+{
+	background-color: #2974b5;
+}
+
+/*Farge på "Back to search" knappen*/
+#backtosearch
+{
+	background-color: #2974b5;
+}
+
+/*Farge på tittel*/
+prm-brief-result .item-title span
+{
+	color: #2974b5;
+}
+
+/*Farge på knappene i brief-view*/
+prm-search-result-list div#mainResults prm-icon.md-icon-button-custom
+{
+	color: #2974b5;
+}
+
+/**/
+prm-brief-result-container.list-item:nth-child(2) > div:nth-child(2)
+.md-autocomplete-suggestions .suggestion-scope, .prm-primary-color, .request-form md-input-container .md-input-container-dummy>.md-select-dummy ._md-select-value._md-select-placeholder, .request-form md-input-container .md-input-container-dummy>.md-select-dummy .md-select-value.md-select-placeholder, .request-form md-input-container md-select .md-select-value.md-select-placeholder, .result-item-actions .md-icon-button, .result-item-actions .more-options-button, md-tab-content .tab-content-header md-input-container md-select-value .md-text, md-tabs md-tabs-wrapper md-tabs-canvas md-pagination-wrapper md-tab-item.md-active:not([disabled]), md-tabs md-tabs-wrapper md-tabs-canvas md-pagination-wrapper md-tab-item.md-focused:not([disabled]), prm-add-query-to-saved-searches .custom-button
+{
+	color: #2974b5;
+}
+
+persistence-button md-icon-button md-primary md-button md-primoExplore-theme md-ink-ripple{
+    background-color: #2974b5;
+}
+prm-breadcrumbs .md-chip.persistent-facet {
+    background-color: #2974b5;
+}
+
+/*Farge på knappene i brief-view*/
+.prm-secondary-bg.prm-hue2, md-checkbox.md-checked ._md-icon, md-checkbox.md-checked .md-icon, md-progress-linear[md-mode=indeterminate].header-progress-bar .prm-hue2.md-bar
+{
+	background-color: #2974b5;
+}
+
+div.expand-section-button .button-as-link.link-alt-color.zero-margin.md-button.md-primoExplore-theme.md-ink-ripple
+{
+	color: #2974b5;
+}
+
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover
+{
+	background-color: #129700
+}
+
+/*
+prm-main-menu[menu-type="menu"] .md-button
+{
+	min-width:7.5em;
 }*/
 
+/*Vis E-tidskrifter på samme line i top-menyen*/
+#mainMenu > a:nth-child(3){
+	min-width:7.5em;
+}
 
+/*Vis E-tidskrifter på samme line i top-menyen*/
+#mainMenu > a:nth-child(5){
+	min-width:4em;
+}
+
+/*Vis Hva synes om ny Oria på to linjer i top-menyen*/
+#mainMenu > a:nth-child(6){
+	min-width:7.5em;
+}
+md-dialog._md-transition-in prm-main-menu[menu-type=full] .close-button
+{
+	background-color: #2974b5;
+}
+
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover
+{
+	background-color: #2974b5;
+}
+
+prm-main-menu[menu-type=full] .md-button:focus:not([disabled])
+{
+	background-color: #2974b5;
+}
+
+prm-main-menu[menu-type=full] .md-button:hover:not([disabled])
+{
+	background-color: #2974b5;
+}
+
+prm-main-menu[menu-type=full] .overlay-menu-item:hover:not([disabled])
+{
+	background-color: #2974b5;
+}
+
+prm-breadcrumbs .md-chip.facet-excluded
+{
+	background-color: white;
+}
+
+prm-search-result-list .list-spacer
+{
+	min-height: 450px;
+}
+
+prm-breadcrumbs .md-chip.persistent-facet .md-chip-content .persistence-button
+{
+	color: #5C92C0;
+}
+
+/* background color E-tidskrifter*/
+prm-atoz-search-bar{
+	background-color: #2c2c2c;
+}
+
+// Footer
 @import 'footer.scss';

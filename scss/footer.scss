@@ -6,82 +6,87 @@
 @import 'breakpoint.scss';
 
 .uio-footer-spacing {
-  @include breakpoint(gt-xs) {
-    height: 150px;
-  }
+	@include breakpoint(gt-xs) {
+		height: 150px;
+	}
 }
 
 .uio-footer {
-  background-color: #1B1B1B;
-  color: #C9C9C9;
-  width: 100%;
+	background-color: #1B1B1B;
+	color: #C9C9C9;
+	width: 100%;
 
-  display: none;
-  &.visible {
-    display: block;
-  }
+	display: none;
+	&.visible {
+		display: block;
+	}
 
-  @include breakpoint(xs) {
-    bottom: 0;
-    position: fixed;
-    .md-headline {
-      font-size: 18px;
-    }
-  }
+	@include breakpoint(xs) {
+		.md-headline {
+			font-size: 18px;
+		}
+	}
+	@include breakpoint(gt-xs) {
+		bottom: 0;
+		position: fixed;
+	}
 
-  .uio-footer-main {
-    display: flex;
-    padding: 16px 24px;
-  }
+	.uio-footer-main {
+		display: flex;
+		padding: 16px 24px;
+	}
 
-  .uio-mobile {
-    @include breakpoint(gt-xs) {
-      display: none;
-    }
-  }
-  .uio-footer-column {
-    flex: 0 0 auto;
-    padding: 0 1em;
-    @include breakpoint(xs) {
-      display: none;
-    }
-  }
-  .uio-title {
-    color: #FFFFFF;
-    font-size: 16px;
-  }
-  .uio-logo {
-    flex: 0 0 auto;
-    display: block;
-    padding: 0;
-    margin-right: 1em;
-    img {
-      display: block;
-      margin: 0;
-      padding: 0;
+	.uio-footer-column {
+		flex: 0 0 auto;
+		padding: 0 1em;
+		@include breakpoint(xs) {
+			display: none;
+		}
+		&.uio-mobile {
+			@include breakpoint(xs) {
+				display: block;
+			}
+			@include breakpoint(gt-xs) {
+				display: none;
+			}
+		}
+	}
+	.uio-title {
+		color: #FFFFFF;
+		font-size: 16px;
+	}
+	.uio-logo {
+		flex: 0 0 auto;
+		display: block;
+		padding: 0;
+		margin-right: 1em;
+		img {
+			display: block;
+			margin: 0;
+			padding: 0;
 
-      @include breakpoint(xs) {
-        width: 50px;
-        height: 50px;
-      }
-      @include breakpoint(gt-xs) {
-        width: 102px;
-        height: 102px;
-      }
+			@include breakpoint(xs) {
+				width: 50px;
+				height: 50px;
+			}
+			@include breakpoint(gt-xs) {
+				width: 102px;
+				height: 102px;
+			}
 
-    }
-  }
-  .line {
-    display: block;
-  }
-  a {
-    color: #FFFFFF;
+		}
+	}
+	.line {
+		display: block;
+	}
+	a {
+		color: #FFFFFF;
+		text-decoration: underline;
 
-    &:hover {
-      color: #EEEEEE;
-      text-decoration: underline;
-    }
-  }
+		&:hover {
+			color: #EEEEEE;
+		}
+	}
 }
 
 /******************************************************************************
