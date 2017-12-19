@@ -3,7 +3,6 @@ import LoggingService from './logging.service';
 
 import prmActionListAfter from './prmActionListAfter.component';
 import prmBriefResultContainerAfter from './prmBriefResultContainerAfter.component';
-import prmExploreMainAfter from './prmExploreMainAfter.component';
 import prmFullViewAfter from './prmFullViewAfter.component';
 import prmNoSearchResultAfter from './prmNoSearchResultAfter.component';
 import prmSaveToFavoritesButtonAfterComponent from './prmSaveToFavoritesButtonAfter.component';
@@ -17,7 +16,6 @@ app.service('loggingService', LoggingService);
 
 app.component('prmActionListAfter', prmActionListAfter);
 app.component('prmBriefResultContainerAfter', prmBriefResultContainerAfter);
-app.component('prmExploreMainAfter', prmExploreMainAfter);
 app.component('prmFullViewAfter', prmFullViewAfter);
 app.component('prmNoSearchResultAfter', prmNoSearchResultAfter);
 app.component('prmSaveToFavoritesButtonAfter', prmSaveToFavoritesButtonAfterComponent);
