@@ -2727,7 +2727,7 @@ var PrmActionListAfterController = function PrmActionListAfterController(logging
 
         btns.on('click', function (evt) {
             var sendToType = evt.currentTarget.querySelectorAll('.button-text')[0].getAttribute('translate');
-            var item = _this.parentCtrl.item;
+            var item = _this.parentCtrl.item.split('.').pop();
             loggingService.trackSendTo(sendToType, item);
         });
     });
