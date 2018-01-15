@@ -232,6 +232,7 @@ class LoggingService {
             last: parseInt(result.info.last),
             total: parseInt(result.info.total),
             results: recs.map((x) => x.id),
+            page_no: pageNo,
 
             aggs: {
                 records: recs.length,  // greit å ha lett tilgjengelig for å kunne regne prosenter
