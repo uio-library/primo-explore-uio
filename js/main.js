@@ -14,14 +14,29 @@ const app = angular.module('viewCustom', ['angularLoad']);
 
 app.service('loggingService', LoggingService);
 
-app.component('prmActionListAfter', prmActionListAfter);
-app.component('prmBriefResultContainerAfter', prmBriefResultContainerAfter);
-app.component('prmFullViewAfter', prmFullViewAfter);
-app.component('prmNoSearchResultAfter', prmNoSearchResultAfter);
-app.component('prmSaveToFavoritesButtonAfter', prmSaveToFavoritesButtonAfterComponent);
-app.component('prmSearchAfter', prmSearchAfterComponent);
+// SearchBar: The search form at the top of the page. Not reloaded on normal page changes.
 app.component('prmSearchBarAfter', prmSearchBarAfterConfig);
+
+// SearchAfter: Everything below the searchbar. Reloaded on normal page changes
+app.component('prmSearchAfter', prmSearchAfterComponent);
+
+// SearchResultList: The list of search results, repeated for each search page
 app.component('prmSearchResultListAfter', prmSearchResultListAfter);
+
+// NoSearchResult: If a search yields zero results, we get this instead of SearchResultList
+app.component('prmNoSearchResultAfter', prmNoSearchResultAfter);
+
+// BriefResultContainer: Each search result in the results list
+app.component('prmBriefResultContainerAfter', prmBriefResultContainerAfter);
+
+// FullView: The details view for a single record
+app.component('prmFullViewAfter', prmFullViewAfter);
+
+// ActionList: The action button bar: E-mail, Cite, Permalink, Endnote export etc.
+app.component('prmActionListAfter', prmActionListAfter);
+
+// SaveToFavoritesButton: The "pin record" button, this is found in multiple places
+app.component('prmSaveToFavoritesButtonAfter', prmSaveToFavoritesButtonAfterComponent);
 
 // ------------------------------------------------------------------------
 
