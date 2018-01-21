@@ -1,8 +1,13 @@
 
 class PrmFullViewAfterController {
     constructor(loggingService) {
-        let item = this.parentCtrl.item;
-        loggingService.trackViewRecord(item);
+        this.loggingService = loggingService;
+        this.item = this.parentCtrl.item;
+        this.loggingService.trackViewRecord(this.item);
+    }
+
+    $onDestroy() {
+        this.loggingService.leaveViewRecord(this.item);
     }
 }
 

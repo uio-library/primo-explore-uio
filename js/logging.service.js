@@ -395,6 +395,14 @@ class LoggingService {
         this.trackEvent('view_record', data);
     }
 
+    leaveViewRecord(record) {
+        console.log('LEAVING RECORD', record);
+        let data = {
+            id: get(record, 'pnx.control.recordid.0'),
+        };
+        this.trackEvent('leave_record', data);
+    }
+
     trackSendTo(serviceName, record) {
         let data = {
             service: serviceName,
