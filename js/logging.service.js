@@ -28,9 +28,10 @@ class LoggingService {
         // Primo version
         this.primoVersion = null;
 
-        // Unfortunately Primo's SearchStateService is not injectable, so we need
-        // to get it from one of the components.
+        // Unfortunately many of the Primo services are not injectable, so we need
+        // to get them from one of the components when ready.
         this.searchStateService = null;
+        this.userSessionManagerService = null;
 
         this.lastAction = null;
 
@@ -95,6 +96,14 @@ class LoggingService {
      * Internal methods
      ****************************************************************************/
 
+    isLoggedIn() {
+        if (!this.userSessionManagerService) {
+            return false;
+        }
+        console.log(this.userSessionManagerService);
+        return !!this.userSessionManagerService.getUserName().length;
+    }
+
     simplifyRecord(record) {
         return {
             id:          get(record, 'pnx.control.recordid.0'),
@@ -113,6 +122,8 @@ class LoggingService {
         let size = JSON.stringify(data).length;
         this.log(`%c [loggingService] Track "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
         this.log('[loggingService]', data);
+
+        data.logged_in = this.isLoggedIn();
 
         let payload = {
             last_action: this.lastAction,
@@ -278,6 +289,11 @@ class LoggingService {
     // public
     setSearchStateService(searchStateService) {
         this.searchStateService = searchStateService;
+    }
+
+    // public
+    setUserSessionManagerService(userSessionManagerService) {
+        this.userSessionManagerService = userSessionManagerService;
     }
 
     // public

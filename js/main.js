@@ -9,6 +9,8 @@ import prmSaveToFavoritesButtonAfterComponent from './prmSaveToFavoritesButtonAf
 import prmSearchAfterComponent from './prmSearchAfter.component';
 import prmSearchBarAfterConfig from './prmSearchBarAfter.component';
 import prmSearchResultListAfter from './prmSearchResultListAfter.component';
+import prmSilentLoginAfterComponent from './prmSilentLoginAfter.component';
+
 
 const app = angular.module('viewCustom', ['angularLoad']);
 
@@ -37,6 +39,9 @@ app.component('prmActionListAfter', prmActionListAfter);
 
 // SaveToFavoritesButton: The "pin record" button, this is found in multiple places
 app.component('prmSaveToFavoritesButtonAfter', prmSaveToFavoritesButtonAfterComponent);
+
+// SilentLogin: Component outside the root uiView.
+app.component('prmSilentLoginAfter', prmSilentLoginAfterComponent);
 
 // ------------------------------------------------------------------------
 
