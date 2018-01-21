@@ -378,7 +378,7 @@ prm-atoz-search-bar {
  *****************************************************************************/
 @media (min-width: 600px) {
   .uio-footer-spacing {
-    height: 150px; } }
+    height: 20vh; } }
 
 .uio-footer {
   background-color: #1B1B1B;
@@ -390,10 +390,6 @@ prm-atoz-search-bar {
   @media (max-width: 599px) {
     .uio-footer .md-headline {
       font-size: 18px; } }
-  @media (min-width: 600px) {
-    .uio-footer {
-      bottom: 0;
-      position: fixed; } }
   .uio-footer .uio-footer-main {
     display: -ms-flexbox;
     display: flex;

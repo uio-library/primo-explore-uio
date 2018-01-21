@@ -7,7 +7,7 @@
 
 .uio-footer-spacing {
 	@include breakpoint(gt-xs) {
-		height: 150px;
+		height: 20vh;
 	}
 }
 
@@ -25,10 +25,6 @@
 		.md-headline {
 			font-size: 18px;
 		}
-	}
-	@include breakpoint(gt-xs) {
-		bottom: 0;
-		position: fixed;
 	}
 
 	.uio-footer-main {
