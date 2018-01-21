@@ -12,7 +12,7 @@ class PrmActionListAfterController {
 
             btns.on('click', (evt) => {
                 var sendToType = evt.currentTarget.querySelectorAll('.button-text')[0].getAttribute('translate');
-                let item = this.parentCtrl.item;
+                let item = this.parentCtrl.item.split('.').pop();
                 loggingService.trackSendTo(sendToType, item);
             });
         });
