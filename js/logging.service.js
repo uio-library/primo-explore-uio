@@ -38,6 +38,9 @@ class LoggingService {
         // Navigation trail
         this.trail = [];
 
+        // User language
+        this.lang = null;
+
         // Number of keypresses in main search field. Tracked by prmSearchBarAfter
         this.keypresses = 0;
 
@@ -48,6 +51,7 @@ class LoggingService {
         this.url = 'https://ub-www01.uio.no/slurp/';
 
         $rootScope.$on('$stateChangeSuccess', (event, toState, toParams, fromState) => {
+            console.log('TOSTA', toState.name);
             var sc = {
                 from: fromState.name,
                 fromTime: new Date(),
@@ -55,6 +59,10 @@ class LoggingService {
                 toTime: new Date(),
                 params: toParams,
             };
+
+            if (toParams.lang) {
+                this.lang = toParams.lang;
+            }
 
             var dt = '';
             if (this.trail.length > 0) {
@@ -64,6 +72,10 @@ class LoggingService {
             this.trail.push(sc);
             this.t1 = new Date();
             this.log(`%c [loggingService] State changed from ${sc.from} to ${sc.to} ${dt}`, 'background: green; color: white; display: block;');
+
+            // if (toState.params.slurp) {
+            //     console.log('SLURP!');
+            // }
 
             // if (toState.name == 'exploreMain.search') {
             //   req.params = {
@@ -104,6 +116,14 @@ class LoggingService {
         return !!this.userSessionManagerService.getUserName().length;
     }
 
+    getUserLanguage() {
+        if (!this.userSessionManagerService) {
+            return this.lang;
+        }
+
+        return this.userSessionManagerService.getUserLanguage();
+    }
+
     simplifyRecord(record) {
         return {
             id:          get(record, 'pnx.control.recordid.0'),
@@ -123,6 +143,7 @@ class LoggingService {
         this.log(`%c [loggingService] Track "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
         this.log('[loggingService]', data);
 
+        data.lang = this.getUserLanguage();
         data.logged_in = this.isLoggedIn();
 
         let payload = {
