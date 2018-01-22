@@ -134,14 +134,15 @@ class LoggingService {
             hume:        uniq(get(record, 'pnx.facets.lfc14', [])),
             real:        uniq(get(record, 'pnx.facets.lfc20', [])),
             rsrctype:    get(record, 'pnx.facets.rsrctype', []),
-            disptype:    get(record, 'pnx.display.type', []),
+            disptype:    get(record, 'pnx.display.type.0'),
+            title:       get(record, 'pnx.display.title.0')
         };
     }
 
     trackEvent(action, data) {
         let size = JSON.stringify(data).length;
-        this.log(`%c [loggingService] Track "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
-        this.log('[loggingService]', data);
+        this.log(`%cTrack "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
+        this.log('', data);
 
         data.lang = this.getUserLanguage();
         data.logged_in = this.isLoggedIn();
