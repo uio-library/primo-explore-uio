@@ -3,6 +3,7 @@ import LoggingService from './logging.service';
 
 import prmActionListAfter from './prmActionListAfter.component';
 import prmBriefResultContainerAfter from './prmBriefResultContainerAfter.component';
+import prmBrowseSearchAfter from './prmBrowseSearchAfter.component';
 import prmFullViewAfter from './prmFullViewAfter.component';
 import prmNoSearchResultAfter from './prmNoSearchResultAfter.component';
 import prmSaveToFavoritesButtonAfterComponent from './prmSaveToFavoritesButtonAfter.component';
@@ -21,6 +22,9 @@ app.component('prmSearchBarAfter', prmSearchBarAfterConfig);
 
 // SearchAfter: Everything below the searchbar. Reloaded on normal page changes
 app.component('prmSearchAfter', prmSearchAfterComponent);
+
+// BrowseSearchAfter: Everything below the searchbar for browse pages. Reloaded on normal page changes
+app.component('prmBrowseSearchAfter', prmBrowseSearchAfter);
 
 // SearchResultList: The list of search results, repeated for each search page
 app.component('prmSearchResultListAfter', prmSearchResultListAfter);

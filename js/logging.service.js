@@ -433,6 +433,14 @@ class LoggingService {
         this.trackEvent('goto_home', {});
     }
 
+    /****************************************************************************
+     * Interface for prmBrowseSearchAfter
+     ****************************************************************************/
+
+    trackBrowse(data) {
+        this.trackEvent('browse', data);
+    }
+
 }
 
 LoggingService.$inject = ['$rootScope'];
