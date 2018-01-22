@@ -142,12 +142,11 @@ class LoggingService {
         this.log(`%cTrack "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
         this.log('', data);
 
-        data.lang = this.getUserLanguage();
-        data.logged_in = this.isLoggedIn();
-
         let payload = {
             last_action: this.lastAction,
             action: action,
+            lang: this.getUserLanguage(),
+            logged_in: this.isLoggedIn(),
             data: data,
             session_id: sessionStorage.getItem('slurpSessionId'),
             session_start: sessionStorage.getItem('slurpSessionStart'),
