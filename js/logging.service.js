@@ -150,6 +150,7 @@ class LoggingService {
             action: action,
             data: data,
             session_id: sessionStorage.getItem('slurpSessionId'),
+            session_start: sessionStorage.getItem('slurpSessionStart'),
             action_no: parseInt(sessionStorage.getItem('slurpActionNo')) || 1,
             hist: window.history.length,
         };
@@ -163,6 +164,7 @@ class LoggingService {
                 if(req.readyState === XMLHttpRequest.DONE && req.status === 200) {
                     let res = JSON.parse(req.responseText);
                     sessionStorage.setItem('slurpSessionId', res.session_id);
+                    sessionStorage.setItem('slurpSessionStart', res.session_start);
                     sessionStorage.setItem('slurpActionNo', res.action_no);
                 }
             };
