@@ -19,7 +19,11 @@ class LoggingService {
      ****************************************************************************/
 
     log() {
-        // console.log.apply(this, arguments);
+        let debug = false;
+
+        let args = [].slice.call(arguments);
+        args[0] = '[slurp] ' + args[0];
+        if (debug) console.log.apply(this, args);
     }
 
     constructor($rootScope) {
@@ -51,7 +55,6 @@ class LoggingService {
         this.url = 'https://ub-www01.uio.no/slurp/';
 
         $rootScope.$on('$stateChangeSuccess', (event, toState, toParams, fromState) => {
-            console.log('TOSTA', toState.name);
             var sc = {
                 from: fromState.name,
                 fromTime: new Date(),
@@ -71,11 +74,7 @@ class LoggingService {
             }
             this.trail.push(sc);
             this.t1 = new Date();
-            this.log(`%c [loggingService] State changed from ${sc.from} to ${sc.to} ${dt}`, 'background: green; color: white; display: block;');
-
-            // if (toState.params.slurp) {
-            //     console.log('SLURP!');
-            // }
+            this.log(`%cState changed from ${sc.from} to ${sc.to} ${dt}`, 'background: green; color: white; display: block;');
 
             // if (toState.name == 'exploreMain.search') {
             //   req.params = {
@@ -112,7 +111,6 @@ class LoggingService {
         if (!this.userSessionManagerService) {
             return false;
         }
-        console.log(this.userSessionManagerService);
         return !!this.userSessionManagerService.getUserName().length;
     }
 
@@ -174,19 +172,20 @@ class LoggingService {
     }
 
     trackError(msg) {
-        this.log(`%c [loggingService] Track error "${msg}"`, 'background: red; color: white; display: block;');
+        this.log(`%c${msg}`, 'background: red; color: white; display: block;');
         // TODO: Actually send something to server
     }
 
     trackSearch(search, result, pageNo) {
         if (!this.trail.length) {
+            this.error('Ouch!');
             // something is wrong
             return;
         }
         let trailStep = this.trail[this.trail.length - 1];
         let dt = new Date() - trailStep.toTime;
-        this.log(`%c [loggingService] Got search results after waiting ${dt/1000.} secs`, 'background: green; color: white; display: block;');
-        this.log('[loggingService]', search, result);
+        this.log(`%cGot search results after waiting ${dt/1000.} secs`, 'background: green; color: white; display: block;');
+        this.log('', search, result);
 
         let recs = result.data.map(this.simplifyRecord);
 
@@ -392,12 +391,13 @@ class LoggingService {
      ****************************************************************************/
 
     trackViewRecord(record) {
+        this.log('View record', record);
         let data = this.simplifyRecord(record);
         this.trackEvent('view_record', data);
     }
 
     leaveViewRecord(record) {
-        console.log('LEAVING RECORD', record);
+        this.log('Leave record', record);
         let data = {
             id: get(record, 'pnx.control.recordid.0'),
         };

@@ -3,7 +3,6 @@ import get from 'lodash/get';
 class PrmBrowseSearchAfterController {
 
     constructor($scope, $window, $element, $timeout, $document, $rootScope, loggingService) {
-        console.log('[slurp] Constructed PrmBrowseSearchAfter', this.parentCtrl);
         $document.ready(() => {
             let data = {
                 input: this.parentCtrl.browseSearchBarService.searchBarInput,
