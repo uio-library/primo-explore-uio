@@ -306,6 +306,10 @@ class LoggingService {
         }
 
         this.trackEvent(action, data);
+
+        // Reset search state params
+        this.pasted = false;
+        this.keypresses = 0;
     }
 
     /****************************************************************************
