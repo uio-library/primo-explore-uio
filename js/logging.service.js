@@ -41,8 +41,9 @@ class LoggingService {
         if (debug) console.log.apply(this, args);
     }
 
-    constructor($rootScope) {
+    constructor($rootScope, $window) {
         this.$rootScope = $rootScope;
+        this.$window = $window;
 
         // Primo version
         this.primoVersion = null;
@@ -158,7 +159,7 @@ class LoggingService {
         // Read or create session
         let sessionTimeout = 30 * 60 ;  // 30 minutes
         let now = Math.round((new Date()).getTime() / 1000);
-        let session = JSON.parse(sessionStorage.getItem('slurpSession'));
+        let session = JSON.parse(this.$window.sessionStorage.getItem('slurpSession'));
         if (!session || now - session.lastActive > sessionTimeout) {
             // Create new session
             session = {
@@ -179,7 +180,7 @@ class LoggingService {
             session_id: session.id,
             session_start: session.created,
             action_no: session.actionCount,
-            hist: window.history.length,
+            hist: this.$window.history.length,
         };
 
         // Don't use $http since we don't want the Primo default headers etc.
@@ -194,7 +195,7 @@ class LoggingService {
         session.actionCount++;
         session.lastAction = action;
         session.lastActive = now;
-        sessionStorage.setItem('slurpSession', JSON.stringify(session));
+        this.$window.sessionStorage.setItem('slurpSession', JSON.stringify(session));
     }
 
     trackError(msg) {
@@ -474,6 +475,6 @@ class LoggingService {
 
 }
 
-LoggingService.$inject = ['$rootScope'];
+LoggingService.$inject = ['$rootScope', '$window'];
 
 export default LoggingService;
