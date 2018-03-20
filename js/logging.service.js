@@ -16,8 +16,10 @@
 import get from 'lodash/get';
 import uniq from 'lodash/uniq';
 import pick from 'lodash/pick';
+import uuidv1 from 'uuid/v1';
 
 class LoggingService {
+    /*
     $rootScope: IRootScopeService;
     primoVersion: string;
     searchStateService: SearchStateService;
@@ -155,14 +157,23 @@ class LoggingService {
         this.log(`%cTrack "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
         this.log('', data);
 
+        let sessionId = sessionStorage.getItem('slurpSessionId');
+        let sessionStart = sessionStorage.getItem('slurpSessionStart');
+        if (!sessionId) {
+            sessionId = uuidv1();
+            sessionStorage.setItem('slurpSessionId', sessionId);
+            sessionStart = Math.round((new Date()).getTime() / 1000);
+            sessionStorage.setItem('slurpSessionStart', sessionStart);
+        }
+
         let payload = {
             last_action: this.lastAction,
             action: action,
             lang: this.getUserLanguage(),
             logged_in: this.isLoggedIn(),
             data: data,
-            session_id: sessionStorage.getItem('slurpSessionId'),
-            session_start: sessionStorage.getItem('slurpSessionStart'),
+            session_id: sessionId,
+            session_start: sessionStart,
             action_no: parseInt(sessionStorage.getItem('slurpActionNo')) || 1,
             hist: window.history.length,
         };
@@ -174,16 +185,9 @@ class LoggingService {
         // to do an extra CORS preflight request.
         setTimeout(() => {
             let req = new XMLHttpRequest();
-            req.onreadystatechange = function() {
-                if(req.readyState === XMLHttpRequest.DONE && req.status === 200) {
-                    let res = JSON.parse(req.responseText);
-                    sessionStorage.setItem('slurpSessionId', res.session_id);
-                    sessionStorage.setItem('slurpSessionStart', res.session_start);
-                    sessionStorage.setItem('slurpActionNo', res.action_no);
-                }
-            };
             req.open('POST', this.url);
             req.send(JSON.stringify(payload));
+            // post and forget
         });
     }
 
