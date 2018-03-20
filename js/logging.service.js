@@ -52,8 +52,6 @@ class LoggingService {
         this.searchStateService = null;
         this.userSessionManagerService = null;
 
-        this.lastAction = null;
-
         // Navigation trail
         this.trail = [];
 
@@ -157,38 +155,46 @@ class LoggingService {
         this.log(`%cTrack "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
         this.log('', data);
 
-        let sessionId = sessionStorage.getItem('slurpSessionId');
-        let sessionStart = sessionStorage.getItem('slurpSessionStart');
-        if (!sessionId) {
-            sessionId = uuidv1();
-            sessionStorage.setItem('slurpSessionId', sessionId);
-            sessionStart = Math.round((new Date()).getTime() / 1000);
-            sessionStorage.setItem('slurpSessionStart', sessionStart);
+        // Read or create session
+        let sessionTimeout = 30 * 60 ;  // 30 minutes
+        let now = Math.round((new Date()).getTime() / 1000);
+        let session = JSON.parse(sessionStorage.getItem('slurpSession'));
+        if (!session || now - session.lastActive > sessionTimeout) {
+            // Create new session
+            session = {
+                id: uuidv1(),
+                created: now,
+                lastAction: null,
+                actionCount: 1,
+            };
         }
 
+        // Prepare payload
         let payload = {
-            last_action: this.lastAction,
+            last_action: session.lastAction,
             action: action,
             lang: this.getUserLanguage(),
             logged_in: this.isLoggedIn(),
             data: data,
-            session_id: sessionId,
-            session_start: sessionStart,
-            action_no: parseInt(sessionStorage.getItem('slurpActionNo')) || 1,
+            session_id: session.id,
+            session_start: session.created,
+            action_no: session.actionCount,
             hist: window.history.length,
         };
-
-        this.lastAction = action;
 
         // Don't use $http since we don't want the Primo default headers etc.
         // By creating a simple request instead, we avoid the browser having
         // to do an extra CORS preflight request.
-        setTimeout(() => {
-            let req = new XMLHttpRequest();
-            req.open('POST', this.url);
-            req.send(JSON.stringify(payload));
-            // post and forget
-        });
+        let req = new XMLHttpRequest();
+        req.open('POST', this.url);
+        // post and forget
+        req.send(JSON.stringify(payload));
+
+        // Update session
+        session.actionCount++;
+        session.lastAction = action;
+        session.lastActive = now;
+        sessionStorage.setItem('slurpSession', JSON.stringify(session));
     }
 
     trackError(msg) {
