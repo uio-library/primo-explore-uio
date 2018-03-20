@@ -152,6 +152,20 @@ class LoggingService {
     }
 
     trackEvent(action, data) {
+
+        if (!this.trail.length) {
+            this.error('Ouch!');
+            // something is wrong
+            return;
+        }
+        let trailStep = this.trail[this.trail.length - 1];
+        let meta = {
+            trailStep: this.trail.length,
+            prepTime: trailStep.toTime - trailStep.fromTime,
+            loadTime: (new Date() - trailStep.toTime),
+            version: this.primoVersion,
+        };
+
         let size = JSON.stringify(data).length;
         this.log(`%cTrack "${action}" action (${size} bytes)`, 'background: green; color: white; display: block;');
         this.log('', data);
@@ -167,7 +181,14 @@ class LoggingService {
                 created: now,
                 lastAction: null,
                 actionCount: 1,
+                lastData: null,
             };
+        }
+
+        if (action == session.lastAction && JSON.stringify(data) == session.lastData) {
+            // Ignore duplicate due to page reload, login or similar
+            this.log('Ingore duplicate action');
+            return;
         }
 
         // Prepare payload
@@ -177,6 +198,7 @@ class LoggingService {
             lang: this.getUserLanguage(),
             logged_in: this.isLoggedIn(),
             data: data,
+            meta: meta,
             session_id: session.id,
             session_start: session.created,
             action_no: session.actionCount,
@@ -195,6 +217,7 @@ class LoggingService {
         session.actionCount++;
         session.lastAction = action;
         session.lastActive = now;
+        session.lastData = JSON.stringify(data);
         this.$window.sessionStorage.setItem('slurpSession', JSON.stringify(session));
     }
 
@@ -204,14 +227,7 @@ class LoggingService {
     }
 
     trackSearch(search, result, pageNo) {
-        if (!this.trail.length) {
-            this.error('Ouch!');
-            // something is wrong
-            return;
-        }
-        let trailStep = this.trail[this.trail.length - 1];
-        let dt = new Date() - trailStep.toTime;
-        this.log(`%cGot search results after waiting ${dt/1000.} secs`, 'background: green; color: white; display: block;');
+        this.log(`%cGot search results`, 'background: green; color: white; display: block;');
         this.log('', search, result);
 
         let recs = result.data.map(this.simplifyRecord);
@@ -269,14 +285,11 @@ class LoggingService {
         }
         query[0].op = null;
 
-        let data = {
-            trailStep: this.trail.length,
 
+        let data = {
+            // Input
             keypresses: this.keypresses,
             pasted: this.pasted,
-            prepTime: trailStep.toTime - trailStep.fromTime,
-            loadTime: (new Date() - trailStep.toTime),
-            version: this.primoVersion,
 
             // Search
             advanced: search.mode == 'advanced',
