@@ -1,10 +1,23 @@
+/**
+ * The Slurp logging service tracks various events, such as searches, and
+ * opening of records, and submits them to a server for storage.
+ *
+ * We've tried to create the service with privacy in mind: It does not track
+ * users, does not store IP addresses, geolocation or other user information.
+ * All information is exchanged over SSL, stored locally at the University of
+ * Oslo and not exchanged with third parties.
+ *
+ * Events are associated with a UUIDv1 session ID generated locally in the
+ * browser and stored in the browser's sessionStorage. By using sessionStorage,
+ * each browser tab or window is threated as a different session. A session
+ * times out after 30 minutes or when the tab/window is closed.
+ */
+
 import get from 'lodash/get';
 import uniq from 'lodash/uniq';
 import pick from 'lodash/pick';
 
 class LoggingService {
-
-    /*
     $rootScope: IRootScopeService;
     primoVersion: string;
     searchStateService: SearchStateService;
@@ -157,6 +170,8 @@ class LoggingService {
         this.lastAction = action;
 
         // Don't use $http since we don't want the Primo default headers etc.
+        // By creating a simple request instead, we avoid the browser having
+        // to do an extra CORS preflight request.
         setTimeout(() => {
             let req = new XMLHttpRequest();
             req.onreadystatechange = function() {

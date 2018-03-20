@@ -1,6 +1,51 @@
-## Workflow
+# University of Oslo local package for Primo Explore
 
-We're using scss and browserify:
+This is the University of Oslo local customization package for Primo Explore.
+It is to be used together with the Bibsys central customization package
+(which isn't published and documented openly).
+
+## What have we customized so far?
+
+* Notably, there is a session logging service (also known as *Slurp*) in
+  [logging.service.js](https://github.com/uio-library/primo-explore-uio/blob/master/js/logging.service.js).
+  Currently it depends on notifications from various directives about events (as an example, the `PrmSearchResultListAfterController` notifies the logging service about searches using `loggingService.searchPageLoaded()`. It would be much cleaner if the logging service could be self-sustained, but at the moment there isn't an open and documented API for Primo Explore apart from the directive hooks. [Primo-expolore-dom](https://github.com/mehmetc/primo-explore-dom) is an interesting project trying to provide a simple domain object model, but at the moment it seems to depend on a lot of undocumented things that might change between Primo versions. Would be great if Ex Libris could support the project or provide something similar.
+
+* In `PrmSearchBarAfterController`, we've set the search input field to automatically get focus.
+
+* In `PrmSearchAfterController`, we move the footer defined in `home_xx_xx.html` to a new DOM location.
+
+* Some light style customization, see [main.scss](https://github.com/uio-library/primo-explore-uio/blob/master/scss/main.scss) for details.
+
+## Setup
+
+1. Clone the [Primo development environment](https://github.com/ExLibrisGroup/primo-explore-devenv) and install dependencies:
+
+   ```
+   git clone https://github.com/ExLibrisGroup/primo-explore-devenv.git
+   cd primo-explore-devenv
+   npm install
+   ```
+
+2. Set `PROXY_SERVER` in `gulp/config.js` to this value:
+
+   ```
+   var PROXY_SERVER = 'https://bibsys-almaprimo.hosted.exlibrisgroup.com:443';
+   ```
+
+3. Download the central package from Primo Back Office (Primo Utilities > UI customization Package Manager)
+into `primo-explore/custom` and unzip it. Make sure the folder name is `CENTRAL_PACKAGE`. This contains the modifications from Bibsys. Open question: Do they version control it?
+
+4. Clone the UiO package into `primo-explore/custom`:
+
+   ```
+   git clone https://github.com/uio-library/primo-explore-uio.git primo-explore/custom/UIO
+   ```
+
+At this point, you should have both `primo-explore/custom/CENTRAL_PACKAGE` and `primo-explore/custom/UIO`.
+
+### Start the UI
+
+We're using scss and browserify, so run
 
 ```
 gulp run --view UIO --browserify --useScss
@@ -13,40 +58,7 @@ This builds
 * `primo-explore/custom/UIO/js/custom.js` from `primo-explore/custom/UIO/js/main.js`
 
 
-Open http://127.0.0.1:8003/primo-explore/?vid=UIO in your browser.
-Using localhost instead of 127.0.0.1 may cause zero search results
-in Chrome (due to a CORS issue?)
-
-
-## Setup
-
-If you don't have Node and Gulp installed already, see the [Primo development environment  documentation](https://github.com/ExLibrisGroup/primo-explore-devenv).
-
-First clone the Primo development environment and install Node dependencies:
-
-```
-git clone https://github.com/ExLibrisGroup/primo-explore-devenv.git
-cd primo-explore-devenv
-npm install
-```
-
-Then set `PROXY_SERVER` in `gulp/config.js` like so:
-
-```
-var PROXY_SERVER = 'https://bibsys-almaprimo.hosted.exlibrisgroup.com:443';
-```
-
-Download the central package from Primo Back Office (Primo Utilities > UI customization Package Manager)
-into `primo-explore/custom` and unzip it. Make sure the folder name is `CENTRAL_PACKAGE`. This contains the modifications from Bibsys.
-Open question: Do they version control it?
-
-Clone the UiO package into `primo-explore/custom`:
-
-```
-git clone git@github.com:uio-library/ubo-primo-package.git primo-explore/custom/UIO
-```
-
-You should now have both `primo-explore/custom/CENTRAL_PACKAGE` and `primo-explore/custom/UIO`.
+Open http://127.0.0.1:8003/primo-explore/?vid=UIO in your browser. Note: Using localhost instead of 127.0.0.1 may cause zero search results in Chrome (due to a CORS issue?)
 
 ## Help and documentation
 
