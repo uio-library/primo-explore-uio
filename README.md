@@ -60,6 +60,24 @@ This builds
 
 Open http://127.0.0.1:8003/primo-explore/?vid=UIO in your browser. Note: Using localhost instead of 127.0.0.1 may cause zero search results in Chrome (due to a CORS issue?)
 
+## Deploy
+
+1. `gulp run --view UIO --browserify --useScss` (in the `primo-explore-devenv` directory) to make sure the js and css are updated.
+
+2. `eslint js` to check that files are ok-ish.
+
+3. `gulp create-package` and select the UIO package. This creates `packages/UIO.zip`.
+
+4. Log in to [Oria back office](https://bibsys-almaprimo.hosted.exlibrisgroup.com:1443/primo_publishing/admin/acegilogin.jsp)
+
+5. Go to Primo Utilities > UI customization Package Manager
+
+6. Select View: UIO (not UBO)
+
+7. Upload using "Upload package forUBO" [sic] and make sure "inherit from central package" is checked.
+
+8. Click "Deploy"
+
 ## Help and documentation
 
 * [Thoughts, ideas, tricks on the new Primo UI](https://docs.google.com/document/d/1pfhN1LZSuV6ZOZ7REldKYH7TR1Cc4BUzTMdNHwH5Bkc/edit#heading=h.frpduni5q4gd)
@@ -71,14 +89,12 @@ Open http://127.0.0.1:8003/primo-explore/?vid=UIO in your browser. Note: Using l
 * [CSS documentation](https://github.com/ExLibrisGroup/primo-explore-package/blob/master/VIEW_CODE/js/README.md).
 * [Images documentation](https://github.com/ExLibrisGroup/primo-explore-package/blob/master/VIEW_CODE/img/README.md).
 
-
-
-## Inspiration
+### Inspiration
 
 * https://github.com/Det-Kongelige-Bibliotek/primo-explore-rex
 * https://github.com/SarahZum/primo-explore-custom-no-results
 
-## Random notes
+### Random notes
 
 
     angular.reloadWithDebugInfo();
@@ -105,85 +121,3 @@ Suggested reading:
 * [Component Lifecycle: $doCheck (angular 1.5.x)](http://www.kristofdegrave.be/2016/07/component-lifecycle-docheck-angular-15x_22.html)
 * [Mastering $watch in AngularJS](https://www.sitepoint.com/mastering-watch-angularjs/)
 
-
-## Directives (per Dec 2017)
-
-- prm-action-container
-- prm-action-container-after
-- prm-action-list
-- prm-action-list-after
-- prm-alma-mashup
-- prm-alma-more-inst
-- prm-alma-more-inst-after
-- prm-authentication
-- prm-authentication-after
-- prm-autocomplete
-- prm-back-to-search-results-button
-- prm-back-to-search-results-button-after
-- prm-brief-result
-- prm-brief-result-after
-- prm-brief-result-container
-- prm-brief-result-container-after
-- prm-change-lang
-- prm-full-view
-- prm-full-view-after
-- prm-full-view-cont
-- prm-full-view-cont-after
-- prm-full-view-page
-- prm-full-view-page-after
-- prm-full-view-service-container
-- prm-full-view-service-container-after
-- prm-highlight
-- prm-icon
-- prm-icon-after
-- prm-library-card-menu
-- prm-library-card-menu-after
-- prm-login-alma-mashup
-- prm-login-alma-mashup-after
-- prm-login-iframe
-- prm-logo
-- prm-logo-after
-- prm-main-menu
-- prm-main-menu-after
-- prm-record-collection-paths
-- prm-record-collection-paths-after
-- prm-save-to-favorites-button
-- prm-save-to-favorites-button-after
-- prm-search-bar
-- prm-search-bar-after
-- prm-search-bookmark-filter
-- prm-search-bookmark-filter-after
-- prm-search-result-availability-line
-- prm-search-result-availability-line-after
-- prm-search-result-frbr-line
-- prm-search-result-frbr-line-after
-- prm-search-result-journal-indication-line
-- prm-search-result-journal-indication-line-after
-- prm-search-result-thumbnail-container
-- prm-search-result-thumbnail-container-after
-- prm-service-details
-- prm-service-details-after
-- prm-service-header
-- prm-service-header-after
-- prm-service-links
-- prm-service-links-after
-- prm-silent-login
-- prm-silent-login-after
-- prm-skip-to
-- prm-skip-to-after
-- prm-snippet
-- prm-snippet-after
-- prm-tabs-and-scopes-selector
-- prm-tabs-and-scopes-selector-after
-- prm-tags-list
-- prm-tags-list-after
-- prm-top-bar-before
-- prm-top-nav-bar-links-after
-- prm-topbar
-- prm-topbar-after
-- prm-user-area
-- prm-user-area-after
-- prm-virtual-browse
-- prm-virtual-browse-after
-- prm-virtual-browse-item
-- prm-virtual-browse-item-after
