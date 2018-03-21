@@ -298,6 +298,7 @@ class LoggingService {
             scope: search.scope,    // Trenger vi både scope og tab?
             sort: search.sortby,
             facets: facets,
+            pc: search.pcAvailability == "true",
 
             // Results
             first: parseInt(result.info.first),
