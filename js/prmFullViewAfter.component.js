@@ -16,5 +16,5 @@ PrmFullViewAfterController.$inject = ['loggingService'];
 export default {
     bindings: {parentCtrl: '<'},
     controller: PrmFullViewAfterController,
-    template: '',
+    template: '',  // `<div style="background:red; color:white; padding: 20px;">Heia</div>`,
 };

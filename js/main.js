@@ -5,12 +5,15 @@ import prmActionListAfter from './prmActionListAfter.component';
 import prmBriefResultContainerAfter from './prmBriefResultContainerAfter.component';
 import prmBrowseSearchAfter from './prmBrowseSearchAfter.component';
 import prmFullViewAfter from './prmFullViewAfter.component';
+import prmFullViewServiceContainerAfter from './prmFullViewServiceContainerAfter.component';
 import prmNoSearchResultAfter from './prmNoSearchResultAfter.component';
 import prmSaveToFavoritesButtonAfterComponent from './prmSaveToFavoritesButtonAfter.component';
 import prmSearchAfterComponent from './prmSearchAfter.component';
 import prmSearchBarAfterConfig from './prmSearchBarAfter.component';
 import prmSearchResultListAfter from './prmSearchResultListAfter.component';
 import prmSilentLoginAfterComponent from './prmSilentLoginAfter.component';
+import prmViewOnlineAfter from './prmViewOnlineAfter.component';
+// import prmAlmaMashup from './prmAlmaMashup.component';
 
 
 const app = angular.module('viewCustom', ['angularLoad']);
@@ -38,6 +41,9 @@ app.component('prmBriefResultContainerAfter', prmBriefResultContainerAfter);
 // FullView: The details view for a single record
 app.component('prmFullViewAfter', prmFullViewAfter);
 
+// FullView: The details view for a single record
+app.component('prmFullViewServiceContainerAfter', prmFullViewServiceContainerAfter);
+
 // ActionList: The action button bar: E-mail, Cite, Permalink, Endnote export etc.
 app.component('prmActionListAfter', prmActionListAfter);
 
@@ -46,6 +52,12 @@ app.component('prmSaveToFavoritesButtonAfter', prmSaveToFavoritesButtonAfterComp
 
 // SilentLogin: Component outside the root uiView.
 app.component('prmSilentLoginAfter', prmSilentLoginAfterComponent);
+
+// ViewOnline: ?
+// app.component('prmViewOnlineAfter', prmViewOnlineAfter);
+
+// Mangler -after hook
+// app.component('prmAlmaMashup', prmAlmaMashup);
 
 // ------------------------------------------------------------------------
 
