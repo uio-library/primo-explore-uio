@@ -1,5 +1,3 @@
-import viewName from './viewName';
-
 import prmSearchAfterComponent from './prmSearchAfter.component';
 
 const app = angular.module('viewCustom', ['angularLoad']);
