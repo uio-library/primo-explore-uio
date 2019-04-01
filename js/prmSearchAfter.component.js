@@ -1,6 +1,6 @@
 class PrmSearchAfterController {
 
-    constructor($scope, $compile, $timeout, $document, loggingService) {
+    constructor($scope, $compile, $timeout, $document) {
         $document.ready(() => {
             // Note: At this point, the frontpage HTML template might not yet be ready.
             // We see this problem especially in Firefox for some reason. Until we find a better
@@ -14,15 +14,13 @@ class PrmSearchAfterController {
                     prmSearchAfterEl.append(footer.detach().addClass('visible'));
                     let fnLink = $compile(footer);      // returns a Link function used to bind template to the scope
                     fnLink($scope);                     // Bind scope to the template
-
-                    loggingService.trackHome();
                 }
             }, 100);
         });
     }
 }
 
-PrmSearchAfterController.$inject = ['$scope', '$compile', '$timeout', '$document', 'loggingService'];
+PrmSearchAfterController.$inject = ['$scope', '$compile', '$timeout', '$document'];
 
 export default {
     bindings: {parentCtrl: '<'},
