@@ -280,39 +280,43 @@ prm-logo .logo-image, prm-logo img {
     max-height: 35px;
 }*/
 
-/* Skjule "Databaser" topmenu*/
+/* Skjule "Databaser" topmenu
 .zero-margin.flex-button.multi-line-button.button-over-dark.md-button.md-primoExplore-theme.md-ink-ripple.layout-align-center-center.layout-column:nth-child(2)
 {
 	display:none;
 }
-
-/* Skjule "Databaser" i topmenu IE*/
+*/
+/* Skjule "Databaser" i topmenu IE
 md-card.transparent-card.md-ink-ripple._md.md-primoExplore-theme.flex-gt-xs-45.flex-gt-sm-30.flex-100:nth-child(2)
 {
 	display:none;
-}
+}*/
 
-/* Skjule "Databaser" topmenu*/
+/* Skjule "Databaser" 
 #mainMenu > div:nth-child(2)
 {
 	display:none;
 }
-/* Skjule "Databaser" i vis mer i topmenu i IE*/
+topmenu*/
+
+/* Skjule "Databaser" i vis mer i topmenu i IE
 .transparent-card:nth-child(2)
 {
 	display:none;
 }
 
-/* Skjule "Databaser" i vis mer i topmenu IE*/
+/* Skjule "Databaser" i vis mer i topmenu IE
 prm-main-menu a:nth-child(2).md-button
 {
 	display:none;
-}
+}*/
 
+/*
 .main-menu-button:nth-child(2)
 {
 	display:none;
 }
+*/
 
 /* Skjule "Tidsskrift søk" i topmenu */
 
@@ -545,9 +549,21 @@ span[translate="finddb.sb.title"], prm-icon[icon-definition="database"]
 color: white;	
 }*/
 
+/* E-tidsskrifter tekst på en linje*/
+#mainMenu > div:nth-child(3) > a > span
+{
+	width: 100px;
+}
+
 .md-button.button-over-dark
 {
 	color:white;
+}
+
+/* Farge på venstre meny tekst: databaseliste*/ 
+prm-tree-nav md-list md-list-item .md-button.branch-name.is-selected
+{
+	color: #2974b5;
 }
 
 .md-button
@@ -702,6 +718,16 @@ button#more-links-button
 {
 	border-right: 1px solid #4d4d4d;
 	border-left: 1px solid #4d4d4d;
+}
+
+
+/*Forhindre at Resource Recommender vises i e-tidsskrift- og database-søk*/
+
+prm-databases prm-resource-recommender {
+     display: none
+}
+prm-journals prm-resource-recommender {
+     display: none
 }
 
 
