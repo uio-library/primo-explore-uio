@@ -4,17 +4,20 @@ This is the University of Oslo local customization package for Primo Explore.
 It is to be used together with the Bibsys central customization package
 (which isn't published and documented openly).
 
-## What have we customized so far?
+## What have we customized?
 
-* Notably, there is a session logging service (also known as *Slurp*) in
-  [logging.service.js](https://github.com/uio-library/primo-explore-uio/blob/master/js/logging.service.js).
-  Currently it depends on notifications from various directives about events (as an example, the `PrmSearchResultListAfterController` notifies the logging service about searches using `loggingService.searchPageLoaded()`. It would be much cleaner if the logging service could be self-sustained, but at the moment there isn't an open and documented API for Primo Explore apart from the directive hooks. [Primo-expolore-dom](https://github.com/mehmetc/primo-explore-dom) is an interesting project trying to provide a simple domain object model, but at the moment it seems to depend on a lot of undocumented things that might change between Primo versions. Would be great if Ex Libris could support the project or provide something similar.
-
-* In `PrmSearchBarAfterController`, we've set the search input field to automatically get focus.
+### Current customizations
 
 * In `PrmSearchAfterController`, we move the footer defined in `home_xx_xx.html` to a new DOM location.
 
 * Some light style customization, see [main.scss](https://github.com/uio-library/primo-explore-uio/blob/master/scss/main.scss) for details.
+
+### Former customizations
+
+* For one year we had <s>is</s> [a session logging service known as *Slurp*](https://github.com/uio-library/primo-explore-uio/commit/966edfb5c601f58b84adcace51fc5038c4c30860). This was used to produce data for the [Dewey mapping project](https://www.uio.no/for-ansatte/enhetssider/ub/prosjekter/mapping-for-sluttbrukertjenester/). We eventually removed it, both for the reason of the data minimization principle, but also due to the risk of it failing after an upgrade since it depended on many different directives. It would be much cleaner if the logging service could be self-sustained, but at the moment there isn't an open and documented API for Primo Explore apart from the directive hooks. [Primo-expolore-dom](https://github.com/mehmetc/primo-explore-dom) is an interesting project trying to provide a simple domain object model, but at the moment it seems to depend on a lot of undocumented things that might change between Primo versions. Would be great if Ex Libris could support the project or provide something similar. 
+See also [this Ideas Exchange idea](https://ideas.exlibrisgroup.com/forums/308176-primo/suggestions/19455328-allow-for-consistant-customizations-in-the-new-ui)
+
+* In `PrmSearchBarAfterController`, we used to set the search input field to automatically get focus until Unit included that functionality in their central package.
 
 ## Setup
 
